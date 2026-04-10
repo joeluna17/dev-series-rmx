@@ -152,6 +152,7 @@ const Page = () => {
 
           <div
             style={{
+              color: "#333",
               fontFamily: "'M PLUS 2 Variable', sans-serif",
               gridColumn: "span 1",
               gridRow: "span 2",
@@ -169,6 +170,7 @@ const Page = () => {
 
           <div
             style={{
+              color: "#333",
               fontFamily: "'M PLUS 2 Variable', sans-serif",
               gridColumn: "span 3",
               gridRow: "span 2",

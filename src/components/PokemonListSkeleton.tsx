@@ -10,7 +10,7 @@ const PokemonListSkeleton = () => {
         gap: "30px",
       }}
     >
-      {Array.from({ length: 8 }).map((_, index) => (
+      {Array.from({ length: 16 }).map((_, index) => (
         <Skeleton key={index} height={120} style={{ borderRadius: "10px" }} />
       ))}
     </div>

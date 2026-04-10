@@ -249,26 +249,6 @@ async function RevenueChart() {
   return <BarChart data={revenue} />;
 }`}
           </pre>
-
-          <h3 className="text-lg font-semibold text-white mt-8 mb-3">
-            Parallel Fetching (Faster!)
-          </h3>
-          <pre className="bg-[#111] border border-[#2a2a2a] rounded-lg p-5 text-[#a5f3fc] text-sm overflow-x-auto">
-            {`export default async function Page({ params }) {
-  // Fire both at the same time — don't await individually
-  const artistPromise = getArtist(params.username);
-  const albumsPromise = getAlbums(params.username);
-
-  const [artist, albums] = await Promise.all([artistPromise, albumsPromise]);
-
-  return (
-    <>
-      <h1>{artist.name}</h1>
-      <Albums list={albums} />
-    </>
-  );
-}`}
-          </pre>
         </section>
 
         {/* Comparison Table */}
@@ -341,13 +321,6 @@ async function RevenueChart() {
                   </code>{" "}
                   for granular page control
                 </li>
-                <li>
-                  Prefer{" "}
-                  <code className="text-[#a5f3fc] bg-[#1e1e1e] px-1 rounded">
-                    Promise.all()
-                  </code>{" "}
-                  for independent parallel fetches
-                </li>
                 <li>Give each boundary a meaningful skeleton</li>
               </ul>
             </div>
@@ -416,7 +389,7 @@ async function RevenueChart() {
       </main>
 
       <footer className="text-center py-8 text-zinc-600 text-sm border-t border-[#2a2a2a]">
-        Master Luna&apos;s Village Dev Series — Prepared by Igor
+      Dev Series
       </footer>
     </div>
   );

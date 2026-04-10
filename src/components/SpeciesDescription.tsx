@@ -15,7 +15,7 @@ const SpeciesDescription = async () => {
   const json = await data.json();
 
   return (
-    <div style={{ marginTop: "20px", padding: "20px" }}>
+    <div style={{ marginTop: "20px", padding: "20px", color: "#333", }}>
       <h2
         style={{
           fontSize: "20px",
